@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-// Backend API base — set NEXT_PUBLIC_API_URL in Vercel env (must be https to
-// avoid mixed-content). e.g. https://api.example.com
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:9101";
+// Calls go to this app's own Next.js API routes, which proxy to the VPS backend
+// server-side (so the browser never hits http directly — no mixed-content).
+const API = "";
 
 type Post = {
   ok: boolean;
