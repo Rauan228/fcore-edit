@@ -61,7 +61,7 @@ export default function EditPage({ params }: { params: { token: string } }) {
     setPublishing(true);
     setStatus("публикую…");
     try {
-      const r = await fetch(`${API}/publish/${token}`, {
+      const r = await fetch(`${API}/api/publish/${token}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: body }),
